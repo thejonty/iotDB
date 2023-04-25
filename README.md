@@ -1,5 +1,5 @@
 # iotDB
-Using ioTDB Python API to save time series data
+Using ioTDB Python API to save time-series data in IoTDB
 
 In this case, IoTDB is running with one config node and three data nodes on CloudLab (https://cloudlab.us/). 
 
