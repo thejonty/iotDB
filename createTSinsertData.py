@@ -92,13 +92,13 @@ def createCpuTimeSeries(ipAddr, seriesName, cpuMetric, compressorName, encoderNa
 
 if __name__ == '__main__':
 #    seriesName = "SnChTest"
-    ipAddr = "10.10.1.4"
+    ipAddr = "10.10.1.3"
     cpuMetric = "freq"
-    compressorNameList = ["UNCOMPRESSED"]
+    compressorNameList = ["UNCOMPRESSED", "SNAPPY", "LZ4"]
     encoderNameList = ["CHIMP", "PLAIN", "GORILLA"]
-    nMeasurements = 1e6
+    nMeasurements = 1e3
     for compressorName in compressorNameList:
         for encoderName in encoderNameList:
-            seriesName = compressorName + "_" + encoderName
+            seriesName = compressorName + "_500_" + encoderName
             createCpuTimeSeries(ipAddr, seriesName, cpuMetric, compressorName, encoderName, nMeasurements)
             print("created and inserted data into TS: " + seriesName)
