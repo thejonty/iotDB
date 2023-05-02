@@ -15,7 +15,7 @@ session.open(False)
 zone = session.get_time_zone()
 ilines = 1
 with session.execute_query_statement(
-    "select * from root.uncmp_node_02.freq"
+    "select * from root.SnChTest.freq"
 ) as session_data_set:
     session_data_set.set_fetch_size(8192)
     while ilines < 10: #session_data_set.has_next():
