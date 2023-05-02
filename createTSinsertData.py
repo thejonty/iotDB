@@ -100,5 +100,5 @@ if __name__ == '__main__':
     for compressorName in compressorNameList:
         for encoderName in encoderNameList:
             seriesName = compressorName + "_" + encoderName
-            createCpuTimeSeries(seriesName, cpuMetric, compressorName, encoderName, nMeasurements)
+            createCpuTimeSeries(ipAddr, seriesName, cpuMetric, compressorName, encoderName, nMeasurements)
             print("created and inserted data into TS: " + seriesName)
